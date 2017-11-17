@@ -9,6 +9,7 @@ package Logic.RentCar;
  *
  * @author María Fernanda Murillo Alfaro
  * @author Karla Vanessa Ballestero Castro
+ * @date 17/11/2017
  * 
  */
 public class Customer {

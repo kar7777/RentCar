@@ -12,6 +12,7 @@ import java.sql.DriverManager;
  *
  * @author María Fernanda Murillo Alfaro
  * @author Karla Vanessa Ballestero Castro
+ * @date 17/11/2017
  * 
  */
 

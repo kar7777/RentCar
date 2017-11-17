@@ -1,0 +1,41 @@
+-- Table: public.customer
+
+-- DROP TABLE public.customer;
+
+CREATE TABLE public.customer
+(
+    id_nm integer NOT NULL DEFAULT nextval('customer_id_nm_seq'::regclass),
+    id_customer integer NOT NULL,
+    name_customer text COLLATE pg_catalog."default",
+    lastname_customer text COLLATE pg_catalog."default",
+    telephone_customer integer,
+    direction_customer text COLLATE pg_catalog."default",
+    photo_customer text COLLATE pg_catalog."default",
+    password_customer text COLLATE pg_catalog."default",
+    CONSTRAINT customer_pkey PRIMARY KEY (id_customer, id_nm)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.customer
+    OWNER to postgres;
+
+-- Delete
+DELETE FROM public.customer
+	WHERE <condition>;
+
+--Insert
+INSERT INTO public.customer(
+	id_nm, id_customer, name_customer, lastname_customer, telephone_customer, direction_customer, photo_customer, password_customer)
+	VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+
+--Select
+SELECT id_nm, id_customer, name_customer, lastname_customer, telephone_customer, direction_customer, photo_customer, password_customer
+	FROM public.customer;
+
+--Update
+UPDATE public.customer
+	SET id_nm=?, id_customer=?, name_customer=?, lastname_customer=?, telephone_customer=?, direction_customer=?, photo_customer=?, password_customer
+	WHERE <condition>;
