@@ -13,8 +13,9 @@ package Logic.RentCar;
  * 
  */
 public class Car {
-    private int id;
+    private int num_car;
     private String id_car;
+    private String brand_car;
     private String model_car;
     private String style_car;
     private String transmission_car;
@@ -26,10 +27,11 @@ public class Car {
     public Car() {
     }
 
-    public Car(int id, String id_car, String model_car, String style_car, String transmission_car,
+    public Car(int id, String id_car, String brand_car, String model_car, String style_car, String transmission_car,
             int year_car, int price_car, String photo_car, String available_car) {
-        this.id = id;
+        this.num_car = num_car;
         this.id_car = id_car;
+        this.brand_car = brand_car;
         this.model_car = model_car;
         this.style_car = style_car;
         this.transmission_car = transmission_car;
@@ -39,12 +41,12 @@ public class Car {
         this.available_car = available_car;
     }
 
-    public int getId() {
-        return id;
+    public int getNum_car() {
+        return num_car;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setNum_car(int id) {
+        this.num_car = num_car;
     }
 
     public String getId_car() {
@@ -53,6 +55,14 @@ public class Car {
 
     public void setId_car(String id_car) {
         this.id_car = id_car;
+    }
+
+    public String getBrand_car() {
+        return brand_car;
+    }
+
+    public void setBrand_car(String brand_car) {
+        this.brand_car = brand_car;
     }
 
     public String getModel_car() {

@@ -1,0 +1,43 @@
+-- Table: public.car
+
+-- DROP TABLE public.car;
+
+CREATE TABLE public.car
+(
+    num_car integer NOT NULL DEFAULT nextval('car_num_car_seq'::regclass),
+    id_car text COLLATE pg_catalog."default" NOT NULL,
+    model_car text COLLATE pg_catalog."default" NOT NULL,
+    style_car text COLLATE pg_catalog."default" NOT NULL,
+    transmission_car text COLLATE pg_catalog."default" NOT NULL,
+    year_car integer NOT NULL,
+    price_car integer,
+    photo_car text COLLATE pg_catalog."default",
+    available_car text COLLATE pg_catalog."default",
+    brand_car text COLLATE pg_catalog."default",
+    CONSTRAINT car_pkey PRIMARY KEY (id_car, num_car)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.car
+    OWNER to postgres;
+
+--Delete
+DELETE FROM public.car
+	WHERE <condition>;
+
+--Insert
+INSERT INTO public.car(
+	num_car, id_car, model_car, style_car, transmission_car, year_car, price_car, photo_car, available_car, brand_car)
+	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+--Select
+SELECT num_car, id_car, model_car, style_car, transmission_car, year_car, price_car, photo_car, available_car, brand_car
+	FROM public.car;
+
+--Update
+UPDATE public.car
+	SET num_car=?, id_car=?, model_car=?, style_car=?, transmission_car=?, year_car=?, price_car=?, photo_car=?, available_car=?, brand_car
+	WHERE <condition>;
