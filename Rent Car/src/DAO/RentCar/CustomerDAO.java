@@ -17,9 +17,10 @@ import java.util.LinkedList;
  * @author María Fernanda Murillo Alfaro
  * @author Karla Vanessa Ballestero Castro
  * @date 17/11/2017
- * 
+ *
  */
 public class CustomerDAO {
+
     //        insert  the new Customer
     public boolean insert(Customer c) throws Exception {
 
@@ -47,7 +48,7 @@ public class CustomerDAO {
         int count = 0;
         boolean isExist = false;
         try (Connection con = ConnectionDB.connection()) {
-            String sql = "select count(*) from customer where email = ? and password = ?";
+            String sql = "select count(*) from customer where id_customer = ? and password_customer = ?";
             PreparedStatement smt = con.prepareStatement(sql);
             smt.setInt(1, c.getId_customer());
             smt.setString(2, c.getPassword());
@@ -60,7 +61,7 @@ public class CustomerDAO {
                 }
             }
 
-            sql = "select id_customer from customer where id_customer = ? and password = ?";
+            sql = "select id from customer where id_customer = ? and password_customer = ?";
             smt = con.prepareStatement(sql);
             smt.setInt(1, c.getId_customer());
             smt.setString(2, c.getPassword());
@@ -73,7 +74,6 @@ public class CustomerDAO {
     }
 
 //         Load the customer
-    
 //         @return all customer
     public LinkedList<Customer> charge() {
         LinkedList<Customer> customer = new LinkedList<>();
@@ -83,7 +83,7 @@ public class CustomerDAO {
             ResultSet rs = smt.executeQuery();
             while (rs.next()) {
                 Customer c = new Customer() {
-               
+
                 };
                 c.setId(rs.getInt("id_nm"));
                 c.setId_customer(rs.getInt("id_customer"));
@@ -140,5 +140,5 @@ public class CustomerDAO {
             throw ex;
         }
     }
-    
+
 }

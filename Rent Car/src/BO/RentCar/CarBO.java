@@ -45,7 +45,7 @@ public class CarBO {
             throw new Exception("Price required");
         }
         if (c.getPhoto_car().isEmpty()) {
-            throw new Exception("Photo required");
+            throw new Exception("A photo is needed to carry out the registration");
         }
         if (c.getAvailable_car().isEmpty()) {
             throw new Exception("Available required");

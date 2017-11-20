@@ -5,6 +5,9 @@
  */
 package Views.RentCar;
 
+import BO.RentCar.CustomerBO;
+import Logic.RentCar.Customer;
+
 /**
  *
  * @author María Fernanda Murillo Alfaro
@@ -64,12 +67,22 @@ public class FrmLogin extends javax.swing.JFrame {
         btnLogin.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("LOG IN");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, -1, -1));
 
         btnRegister.setBackground(new java.awt.Color(0, 0, 51));
         btnRegister.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnRegister.setForeground(new java.awt.Color(255, 255, 255));
         btnRegister.setText("REGISTER");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 20, 120, -1));
 
         lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/rent a car.jpg"))); // NOI18N
@@ -77,6 +90,41 @@ public class FrmLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    //Method to register
+    private void goRegister() {
+        FrmSignIn register = new FrmSignIn();
+        register.setVisible(true);
+        dispose();
+    }
+
+    //Method to login
+    private void login() {
+        Customer cus = new Customer();
+        CustomerBO cbo = new CustomerBO();
+
+        cus.setId_customer(Integer.parseInt(txtID.getText()));
+        cus.setPassword(txtPassword.getText());
+        boolean isAuth = cbo.userLogin(cus);
+        if (isAuth) {
+            if (cus.getId_customer() == 1111 && (cus.getPassword().equals("1111"))) {
+                System.out.println("Hello Admin!");
+            } else if (cus.getId_customer() != 1111) {
+                System.out.println(cus.getName() + cus.getLastname());
+                
+            }
+
+        }
+    }
+
+    
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        login();
+    }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        goRegister();
+    }//GEN-LAST:event_btnRegisterActionPerformed
 
     /**
      * @param args the command line arguments

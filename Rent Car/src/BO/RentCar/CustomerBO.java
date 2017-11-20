@@ -13,9 +13,10 @@ import Logic.RentCar.Customer;
  * @author María Fernanda Murillo Alfaro
  * @author Karla Vanessa Ballestero Castro
  * @date 17/11/2017
- * 
+ *
  */
 public class CustomerBO {
+
     /**
      *
      * @param c Customer to be added
@@ -23,7 +24,7 @@ public class CustomerBO {
      * @throws Exception returns the error that needs to be repaired
      */
     public boolean register(Customer c) throws Exception {
-        if (c.getId_customer()<= 0) {
+        if (c.getId_customer() <= 0) {
             throw new Exception("Required ID");
         }
         if (c.getName().isEmpty()) {
@@ -39,12 +40,11 @@ public class CustomerBO {
             throw new Exception("Direction required");
         }
         if (c.getPhoto().isEmpty()) {
-            throw new Exception("Photo required");
-        }        
+            throw new Exception("A photo is needed to carry out the registration");
+        }
         if (c.getPassword().isEmpty()) {
             throw new Exception("Password required");
         }
-
 
         CustomerDAO cdao = new CustomerDAO();
         if (c.getId() > 0) {
@@ -73,5 +73,5 @@ public class CustomerBO {
         CustomerDAO cdao = new CustomerDAO();
         cdao.delete(cus);
     }
-   
+
 }
