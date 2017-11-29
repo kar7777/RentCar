@@ -24,7 +24,8 @@ import javax.swing.JOptionPane;
  *
  */
 public class FrmSignIn extends javax.swing.JFrame {
-    private LinkedList <Customer> customerList;
+
+    private LinkedList<Customer> customerList;
     private File file;
     private String photo;
 
@@ -34,9 +35,10 @@ public class FrmSignIn extends javax.swing.JFrame {
     public FrmSignIn() {
         initComponents();
         this.setLocationRelativeTo(null);
+        customerList = new LinkedList<>();
     }
-    
-    public FrmSignIn(LinkedList <Customer> customerList) {
+
+    public FrmSignIn(LinkedList<Customer> customerList) {
         this.customerList = customerList;
     }
 
@@ -169,8 +171,8 @@ public class FrmSignIn extends javax.swing.JFrame {
     private void findPhoto() {
         int result;
         FrmPhoto frm = new FrmPhoto();
-        FileNameExtensionFilter filto = new FileNameExtensionFilter("JPG and PNG", "jpg", "png");
-        frm.jfchPhoto.setFileFilter(filto);
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("JPG and PNG", "jpg", "png");
+        frm.jfchPhoto.setFileFilter(filter);
         result = frm.jfchPhoto.showOpenDialog(null);
         if (JFileChooser.APPROVE_OPTION == result) {
             file = frm.jfchPhoto.getSelectedFile();
@@ -189,6 +191,7 @@ public class FrmSignIn extends javax.swing.JFrame {
     //Method to register
     private void registerNewCustomer() {
         try {
+            CustomerBO cbo = new CustomerBO();
             Customer c = new Customer();
             c.setId_customer(Integer.parseInt(txtID.getText()));
             c.setName(txtName.getText());
@@ -199,8 +202,6 @@ public class FrmSignIn extends javax.swing.JFrame {
 
             if (password1.getText().equals(password2.getText())) {
                 c.setPassword(password1.getText());
-
-                CustomerBO cbo = new CustomerBO();
 
                 if (cbo.register(c)) {
                     JOptionPane.showMessageDialog(null, "Registered");

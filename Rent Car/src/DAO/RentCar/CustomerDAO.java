@@ -61,7 +61,7 @@ public class CustomerDAO {
                 }
             }
 
-            sql = "select id from customer where id_customer = ? and password_customer = ?";
+            sql = "select id_nm from customer where id_customer = ? and password_customer = ?";
             smt = con.prepareStatement(sql);
             smt.setInt(1, c.getId_customer());
             smt.setString(2, c.getPassword());
