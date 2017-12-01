@@ -5,9 +5,14 @@
  */
 package Views.RentCar;
 
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author Equipo
+ * @author María Fernanda Murillo Alfaro
+ * @author Karla Vanessa Ballestero Castro
+ * @date 29/11/2017
+ *
  */
 public class FrmMenuAdmin extends javax.swing.JFrame {
 
@@ -16,6 +21,7 @@ public class FrmMenuAdmin extends javax.swing.JFrame {
      */
     public FrmMenuAdmin() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -27,70 +33,144 @@ public class FrmMenuAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        btnBrand = new javax.swing.JButton();
+        btnCar = new javax.swing.JButton();
+        btnModel = new javax.swing.JButton();
+        btnOffice = new javax.swing.JButton();
+        btnStyle = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
+        lblWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("jLabel1");
+        btnBrand.setText("Brand");
+        btnBrand.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBrandActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnBrand, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 118, 53));
 
-        jButton1.setText("jButton1");
+        btnCar.setText("Car");
+        btnCar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 118, 46));
 
-        jButton2.setText("jButton2");
+        btnModel.setText("Model");
+        btnModel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModelActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 118, 44));
 
-        jButton3.setText("jButton3");
+        btnOffice.setText("Office");
+        btnOffice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOfficeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnOffice, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 118, 42));
 
-        jButton5.setText("jButton5");
+        btnStyle.setText("Style");
+        btnStyle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStyleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnStyle, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 118, 44));
 
-        jButton6.setText("jButton6");
+        btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 118, 42));
 
-        jButton7.setText("jButton7");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(221, 221, 221)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton7)
-                    .addComponent(jButton6)
-                    .addComponent(jButton5)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
-                .addContainerGap(235, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(24, 24, 24)
-                .addComponent(jButton1)
-                .addGap(27, 27, 27)
-                .addComponent(jButton2)
-                .addGap(26, 26, 26)
-                .addComponent(jButton3)
-                .addGap(30, 30, 30)
-                .addComponent(jButton5)
-                .addGap(28, 28, 28)
-                .addComponent(jButton6)
-                .addGap(30, 30, 30)
-                .addComponent(jButton7)
-                .addGap(0, 82, Short.MAX_VALUE))
-        );
+        lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/wallpaper.jpg"))); // NOI18N
+        getContentPane().add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnBrandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBrandActionPerformed
+        goCrudBrand();
+    }//GEN-LAST:event_btnBrandActionPerformed
+
+    private void btnCarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCarActionPerformed
+        goCrudCar();
+    }//GEN-LAST:event_btnCarActionPerformed
+
+    private void btnModelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModelActionPerformed
+        goCrudModel();
+    }//GEN-LAST:event_btnModelActionPerformed
+
+    private void btnOfficeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOfficeActionPerformed
+        goCrudOffice();
+    }//GEN-LAST:event_btnOfficeActionPerformed
+
+    private void btnStyleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStyleActionPerformed
+        goCrudStyle();
+    }//GEN-LAST:event_btnStyleActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        LogOut();
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    
+    //Method to go to the crud brand
+    private void goCrudBrand() {
+        FrmCRUDBrand brand = new FrmCRUDBrand();
+        brand.setVisible(true);
+        brand.setLocationRelativeTo(null);
+        dispose();
+    }
+    
+    //Method to go to the crud car
+    private void goCrudCar() {
+        FrmCRUDCar car = new FrmCRUDCar();
+        car.setVisible(true);
+        car.setLocationRelativeTo(null);
+        dispose();
+    }
+    
+    //Method to go to the crud model
+    private void goCrudModel() {
+        FrmCRUDModel model = new FrmCRUDModel();
+        model.setVisible(true);
+        model.setLocationRelativeTo(null);
+        dispose();
+    }    
+    
+    //Method to go to the crud office
+    private void goCrudOffice() {
+        FrmCRUDOffice office = new FrmCRUDOffice();
+        office.setVisible(true);
+        office.setLocationRelativeTo(null);
+        dispose();
+    }
+    
+    //Method to go to the crud style
+    private void goCrudStyle() {
+        FrmCRUDStyle style = new FrmCRUDStyle();
+        style.setVisible(true);
+        style.setLocationRelativeTo(null);
+        dispose();
+    }
+    
+    //Method to close session
+    private void LogOut() {
+        JOptionPane.showMessageDialog(null, "Finalized session");
+        FrmLogin out = new FrmLogin();
+        out.setVisible(true);
+        dispose();
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -127,12 +207,12 @@ public class FrmMenuAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnBrand;
+    private javax.swing.JButton btnCar;
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnModel;
+    private javax.swing.JButton btnOffice;
+    private javax.swing.JButton btnStyle;
+    private javax.swing.JLabel lblWallpaper;
     // End of variables declaration//GEN-END:variables
 }
