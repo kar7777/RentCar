@@ -47,35 +47,38 @@ public class FrmLogin extends javax.swing.JFrame {
 
         txtID.setBackground(new java.awt.Color(51, 51, 51));
         txtID.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 160, -1));
+        getContentPane().add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 180, 30));
 
         txtPassword.setBackground(new java.awt.Color(51, 51, 51));
         txtPassword.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 160, -1));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 180, 30));
 
-        lblId.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        lblId.setForeground(new java.awt.Color(255, 255, 255));
+        lblId.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
+        lblId.setForeground(new java.awt.Color(0, 0, 0));
         lblId.setText("ID:");
-        getContentPane().add(lblId, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, -1, -1));
+        getContentPane().add(lblId, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, -1, -1));
 
-        lblPassword.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        lblPassword.setForeground(new java.awt.Color(255, 255, 255));
+        lblPassword.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(0, 0, 0));
         lblPassword.setText("Password:");
-        getContentPane().add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, -1, -1));
+        getContentPane().add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, -1, -1));
 
-        btnLogin.setBackground(new java.awt.Color(0, 0, 51));
-        btnLogin.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnLogin.setBackground(new java.awt.Color(51, 51, 51));
+        btnLogin.setFont(new java.awt.Font("Palatino Linotype", 1, 12)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/clave (1).png"))); // NOI18N
         btnLogin.setText("LOG IN");
+        btnLogin.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/clave (2).png"))); // NOI18N
+        btnLogin.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/clave (2).png"))); // NOI18N
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, -1, -1));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 140, 40));
 
-        btnRegister.setBackground(new java.awt.Color(0, 0, 51));
-        btnRegister.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnRegister.setBackground(new java.awt.Color(51, 51, 51));
+        btnRegister.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
         btnRegister.setForeground(new java.awt.Color(255, 255, 255));
         btnRegister.setText("REGISTER");
         btnRegister.addActionListener(new java.awt.event.ActionListener() {
@@ -83,10 +86,10 @@ public class FrmLogin extends javax.swing.JFrame {
                 btnRegisterActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 20, 120, -1));
+        getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 130, -1));
 
-        lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/rent a car.jpg"))); // NOI18N
-        getContentPane().add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
+        lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_First.jpg"))); // NOI18N
+        getContentPane().add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

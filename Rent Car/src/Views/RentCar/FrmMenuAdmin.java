@@ -44,56 +44,80 @@ public class FrmMenuAdmin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnBrand.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
+        btnBrand.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/volante (1).png"))); // NOI18N
         btnBrand.setText("Brand");
+        btnBrand.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/volante.png"))); // NOI18N
+        btnBrand.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/volante.png"))); // NOI18N
         btnBrand.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBrandActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBrand, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 118, 53));
+        getContentPane().add(btnBrand, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 150, 70));
 
+        btnCar.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
+        btnCar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/descapotable (1).png"))); // NOI18N
         btnCar.setText("Car");
+        btnCar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/descapotable.png"))); // NOI18N
+        btnCar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/descapotable.png"))); // NOI18N
         btnCar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 118, 46));
+        getContentPane().add(btnCar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 150, 70));
 
+        btnModel.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
+        btnModel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/modelo-de-coche-antiguo.png"))); // NOI18N
         btnModel.setText("Model");
+        btnModel.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/coche-modelo-hatchback.png"))); // NOI18N
+        btnModel.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/coche-redondeado-de-viejo-modelo.png"))); // NOI18N
         btnModel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModelActionPerformed(evt);
             }
         });
-        getContentPane().add(btnModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 118, 44));
+        getContentPane().add(btnModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 150, 70));
 
+        btnOffice.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
+        btnOffice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/carpeta.png"))); // NOI18N
         btnOffice.setText("Office");
+        btnOffice.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/carpeta (1).png"))); // NOI18N
+        btnOffice.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/carpeta (1).png"))); // NOI18N
         btnOffice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOfficeActionPerformed(evt);
             }
         });
-        getContentPane().add(btnOffice, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 118, 42));
+        getContentPane().add(btnOffice, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 190, 42));
 
+        btnStyle.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
+        btnStyle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/coche-modelo-hatchback.png"))); // NOI18N
         btnStyle.setText("Style");
+        btnStyle.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/descapotable (1).png"))); // NOI18N
+        btnStyle.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/descapotable (1).png"))); // NOI18N
         btnStyle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnStyleActionPerformed(evt);
             }
         });
-        getContentPane().add(btnStyle, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 118, 44));
+        getContentPane().add(btnStyle, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 150, 70));
 
+        btnExit.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/salida (1).png"))); // NOI18N
         btnExit.setText("Exit");
+        btnExit.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/salida.png"))); // NOI18N
+        btnExit.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/salida.png"))); // NOI18N
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitActionPerformed(evt);
             }
         });
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 118, 42));
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 118, 42));
 
-        lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/wallpaper.jpg"))); // NOI18N
-        getContentPane().add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 450));
+        lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
+        getContentPane().add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

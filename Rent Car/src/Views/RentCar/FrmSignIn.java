@@ -70,54 +70,62 @@ public class FrmSignIn extends javax.swing.JFrame {
         btnSelectPhoto = new javax.swing.JButton();
         btnRegister = new javax.swing.JButton();
         lblRegister = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         lblWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblID.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
         lblID.setForeground(new java.awt.Color(255, 255, 255));
         lblID.setText("ID:");
-        getContentPane().add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 112, -1, -1));
+        getContentPane().add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, -1, -1));
 
+        lblName.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
         lblName.setForeground(new java.awt.Color(255, 255, 255));
         lblName.setText("Name:");
-        getContentPane().add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
+        getContentPane().add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
 
+        lblLastname.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
         lblLastname.setForeground(new java.awt.Color(255, 255, 255));
         lblLastname.setText("Lastname:");
-        getContentPane().add(lblLastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
+        getContentPane().add(lblLastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, -1, -1));
 
+        lblTelephone.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
         lblTelephone.setForeground(new java.awt.Color(255, 255, 255));
         lblTelephone.setText("Telephone:");
-        getContentPane().add(lblTelephone, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+        getContentPane().add(lblTelephone, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, -1));
 
+        lblDirection.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
         lblDirection.setForeground(new java.awt.Color(255, 255, 255));
         lblDirection.setText("Direction:");
-        getContentPane().add(lblDirection, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, -1));
+        getContentPane().add(lblDirection, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
 
+        lblPassword1.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
         lblPassword1.setForeground(new java.awt.Color(255, 255, 255));
         lblPassword1.setText("Password:");
-        getContentPane().add(lblPassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, -1, -1));
+        getContentPane().add(lblPassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, -1, -1));
 
+        lblPassword2.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
         lblPassword2.setForeground(new java.awt.Color(255, 255, 255));
         lblPassword2.setText("Password:");
         getContentPane().add(lblPassword2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 500, -1, -1));
 
         txtID.setBackground(new java.awt.Color(51, 51, 51));
         txtID.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 110, -1));
+        getContentPane().add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 120, -1));
 
         txtName.setBackground(new java.awt.Color(51, 51, 51));
         txtName.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 120, -1));
+        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 120, -1));
 
         txtLastname.setBackground(new java.awt.Color(51, 51, 51));
         txtLastname.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(txtLastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 120, -1));
+        getContentPane().add(txtLastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 120, -1));
 
         txtTelephone.setBackground(new java.awt.Color(51, 51, 51));
         txtTelephone.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(txtTelephone, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 120, -1));
+        getContentPane().add(txtTelephone, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 120, -1));
 
         txaDirection.setBackground(new java.awt.Color(51, 51, 51));
         txaDirection.setColumns(20);
@@ -125,28 +133,33 @@ public class FrmSignIn extends javax.swing.JFrame {
         txaDirection.setRows(5);
         jScrollPane1.setViewportView(txaDirection);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, -1, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 240, 90));
 
         password1.setBackground(new java.awt.Color(51, 51, 51));
         password1.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(password1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, 136, -1));
+        getContentPane().add(password1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 450, 136, -1));
 
         password2.setBackground(new java.awt.Color(51, 51, 51));
         password2.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(password2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 136, -1));
-        getContentPane().add(lblPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 43, 144, 154));
+        getContentPane().add(lblPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 144, 154));
 
-        btnSelectPhoto.setBackground(new java.awt.Color(0, 0, 51));
+        btnSelectPhoto.setBackground(new java.awt.Color(152, 120, 22));
+        btnSelectPhoto.setFont(new java.awt.Font("Palatino Linotype", 1, 12)); // NOI18N
         btnSelectPhoto.setForeground(new java.awt.Color(255, 255, 255));
+        btnSelectPhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/imagen.png"))); // NOI18N
         btnSelectPhoto.setText("Select a photo");
+        btnSelectPhoto.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/imagen (1).png"))); // NOI18N
+        btnSelectPhoto.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/imagen (1).png"))); // NOI18N
         btnSelectPhoto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSelectPhotoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSelectPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, -1, -1));
+        getContentPane().add(btnSelectPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, -1, -1));
 
-        btnRegister.setBackground(new java.awt.Color(0, 0, 51));
+        btnRegister.setBackground(new java.awt.Color(152, 120, 22));
+        btnRegister.setFont(new java.awt.Font("Palatino Linotype", 1, 12)); // NOI18N
         btnRegister.setForeground(new java.awt.Color(255, 255, 255));
         btnRegister.setText("Register");
         btnRegister.addActionListener(new java.awt.event.ActionListener() {
@@ -154,15 +167,19 @@ public class FrmSignIn extends javax.swing.JFrame {
                 btnRegisterActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 584, -1, -1));
+        getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 500, 80, -1));
 
-        lblRegister.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lblRegister.setBackground(new java.awt.Color(255, 153, 0));
+        lblRegister.setFont(new java.awt.Font("Palatino Linotype", 1, 18)); // NOI18N
         lblRegister.setForeground(new java.awt.Color(255, 255, 255));
         lblRegister.setText("REGISTER");
-        getContentPane().add(lblRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
+        getContentPane().add(lblRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 100, -1));
 
-        lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/wallpaper.jpg"))); // NOI18N
-        getContentPane().add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 650));
+        jButton1.setBackground(new java.awt.Color(102, 102, 102));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 26, 180, 40));
+
+        lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
+        getContentPane().add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -273,6 +290,7 @@ public class FrmSignIn extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegister;
     private javax.swing.JButton btnSelectPhoto;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblDirection;
     private javax.swing.JLabel lblID;
