@@ -79,7 +79,7 @@ public class FrmSignIn extends javax.swing.JFrame {
         lblID.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
         lblID.setForeground(new java.awt.Color(255, 255, 255));
         lblID.setText("ID:");
-        getContentPane().add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, -1, -1));
+        getContentPane().add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
 
         lblName.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
         lblName.setForeground(new java.awt.Color(255, 255, 255));
@@ -133,7 +133,7 @@ public class FrmSignIn extends javax.swing.JFrame {
         txaDirection.setRows(5);
         jScrollPane1.setViewportView(txaDirection);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 240, 90));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 250, 100));
 
         password1.setBackground(new java.awt.Color(51, 51, 51));
         password1.setForeground(new java.awt.Color(255, 255, 255));
@@ -142,7 +142,7 @@ public class FrmSignIn extends javax.swing.JFrame {
         password2.setBackground(new java.awt.Color(51, 51, 51));
         password2.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(password2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 136, -1));
-        getContentPane().add(lblPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 144, 154));
+        getContentPane().add(lblPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, 144, 154));
 
         btnSelectPhoto.setBackground(new java.awt.Color(152, 120, 22));
         btnSelectPhoto.setFont(new java.awt.Font("Palatino Linotype", 1, 12)); // NOI18N
@@ -156,7 +156,7 @@ public class FrmSignIn extends javax.swing.JFrame {
                 btnSelectPhotoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSelectPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, -1, -1));
+        getContentPane().add(btnSelectPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, -1, -1));
 
         btnRegister.setBackground(new java.awt.Color(152, 120, 22));
         btnRegister.setFont(new java.awt.Font("Palatino Linotype", 1, 12)); // NOI18N
