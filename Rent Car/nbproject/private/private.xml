@@ -3,11 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Views/RentCar/FrmCRUDStyle.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/BO/RentCar/StyleBO.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Logic/RentCar/Car.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/BO/RentCar/BrandBO.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/DAO/RentCar/BrandDAO.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Logic/RentCar/Office.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Views/RentCar/FrmCRUDCar.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/BO/RentCar/OfficeBO.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Views/RentCar/FrmCRUDOffice.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/DAO/RentCar/ModelDAO.java</file>
             <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Views/RentCar/FrmLogin.java</file>
-            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/DAO/RentCar/ConnectionDB.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Views/RentCar/FrmCRUDBrand.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Views/RentCar/FrmCRUDModel.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/BO/RentCar/ModelBO.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Logic/RentCar/Model.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Logic/RentCar/Brand.java</file>
             <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Views/RentCar/FrmSignIn.java</file>
-            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/BO/RentCar/CustomerBO.java</file>
-            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/DAO/RentCar/CustomerDAO.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/DAO/RentCar/OfficeDAO.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/DAO/RentCar/StyleDAO.java</file>
+            <file>file:/C:/Users/Equipo/Desktop/Project%20Rent%20Car/Rent%20Car/src/Logic/RentCar/Style.java</file>
         </group>
     </open-files>
 </project-private>

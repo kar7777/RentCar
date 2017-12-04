@@ -25,8 +25,8 @@ public class CustomerDAO {
     public boolean insert(Customer c) throws Exception {
 
         try (Connection con = ConnectionDB.connection()) {
-            String sql = "insert into customer (id_nm, id_customer, name_customer, lastname_customer, telephone_customer"
-                    + ", direction_customer, photo_customer, password_customer) values (?,?,?,?,?,?,?,?)";
+            String sql = "insert into customer (id_customer, name_customer, lastname_customer, telephone_customer"
+                    + ", direction_customer, photo_customer, password_customer) values (?,?,?,?,?,?,?)";
             PreparedStatement smt = con.prepareStatement(sql);
             smt.setInt(1, c.getId_customer());
             smt.setString(2, c.getName());
