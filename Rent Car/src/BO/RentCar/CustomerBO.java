@@ -24,7 +24,7 @@ public class CustomerBO {
      * @throws Exception returns the error that needs to be repaired
      */
     public boolean register(Customer c) throws Exception {
-        if (c.getId_customer() <= 0) {
+        if (c.getId_customer().isEmpty()) {
             throw new Exception("Required ID");
         }
         if (c.getName().isEmpty()) {

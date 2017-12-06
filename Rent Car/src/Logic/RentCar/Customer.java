@@ -14,7 +14,7 @@ package Logic.RentCar;
  */
 public class Customer {
     private int id;
-    private int id_customer;
+    private String id_customer;
     private String name;
     private String lastname;
     private int telephone;
@@ -25,7 +25,7 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int id, int id_customer, String name, String lastname, int telephone, String direction, String photo, String password) {
+    public Customer(int id, String id_customer, String name, String lastname, int telephone, String direction, String photo, String password) {
         this.id = id;
         this.id_customer = id_customer;
         this.name = name;
@@ -44,11 +44,11 @@ public class Customer {
         this.id = id;
     }
 
-    public int getId_customer() {
+    public String getId_customer() {
         return id_customer;
     }
 
-    public void setId_customer(int id_customer) {
+    public void setId_customer(String id_customer) {
         this.id_customer = id_customer;
     }
 

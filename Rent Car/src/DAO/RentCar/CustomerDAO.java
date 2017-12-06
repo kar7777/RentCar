@@ -28,7 +28,7 @@ public class CustomerDAO {
             String sql = "insert into customer (id_customer, name_customer, lastname_customer, telephone_customer"
                     + ", direction_customer, photo_customer, password_customer) values (?,?,?,?,?,?,?)";
             PreparedStatement smt = con.prepareStatement(sql);
-            smt.setInt(1, c.getId_customer());
+            smt.setString(1, c.getId_customer());
             smt.setString(2, c.getName());
             smt.setString(3, c.getLastname());
             smt.setInt(4, c.getTelephone());
@@ -50,7 +50,7 @@ public class CustomerDAO {
         try (Connection con = ConnectionDB.connection()) {
             String sql = "select count(*) from customer where id_customer = ? and password_customer = ?";
             PreparedStatement smt = con.prepareStatement(sql);
-            smt.setInt(1, c.getId_customer());
+            smt.setString(1, c.getId_customer());
             smt.setString(2, c.getPassword());
             ResultSet rs = smt.executeQuery();
 
@@ -63,7 +63,7 @@ public class CustomerDAO {
 
             sql = "select id_nm from customer where id_customer = ? and password_customer = ?";
             smt = con.prepareStatement(sql);
-            smt.setInt(1, c.getId_customer());
+            smt.setString(1, c.getId_customer());
             smt.setString(2, c.getPassword());
             rs = smt.executeQuery();
 
@@ -86,7 +86,7 @@ public class CustomerDAO {
 
                 };
                 c.setId(rs.getInt("id_nm"));
-                c.setId_customer(rs.getInt("id_customer"));
+                c.setId_customer(rs.getString("id_customer"));
                 c.setName(rs.getString("name_customer"));
                 c.setLastname(rs.getString("lastname_customer"));
                 c.setTelephone(rs.getInt("telephone_customer"));
@@ -112,7 +112,7 @@ public class CustomerDAO {
                     + " password_customer =? where id_nm = ? ";
             PreparedStatement smt = con.prepareStatement(sql);
 
-            smt.setInt(1, cus.getId_customer());
+            smt.setString(1, cus.getId_customer());
             smt.setString(2, cus.getName());
             smt.setString(3, cus.getLastname());
             smt.setInt(4, cus.getTelephone());
