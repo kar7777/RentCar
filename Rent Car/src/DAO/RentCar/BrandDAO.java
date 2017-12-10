@@ -25,7 +25,7 @@ public class BrandDAO {
     public boolean insert(Brand b) throws Exception {
 
         try (Connection con = ConnectionDB.connection()) {
-            String sql = "insert into brand (brand_id, brand_name) values (?,?)";
+            String sql = "insert into brand (id_brand, name_brand) values (?,?)";
             PreparedStatement smt = con.prepareStatement(sql);
             smt.setString(1, b.getBrand_id());
             smt.setString(2, b.getBrand_name());
@@ -38,40 +38,40 @@ public class BrandDAO {
 
     }
 
-////      To see if the user exists
-//    public boolean isUserExist(Customer c) {
-//        int count = 0;
-//        boolean isExist = false;
-//        try (Connection con = ConnectionDB.connection()) {
-//            String sql = "select count(*) from brand where id_customer = ? and password_customer = ?";
-//            PreparedStatement smt = con.prepareStatement(sql);
-//            smt.setInt(1, c.getId_customer());
-//            smt.setString(2, c.getPassword());
-//            ResultSet rs = smt.executeQuery();
-//
-//            while (rs.next()) {
-//                count = rs.getInt(1);
-//                if (count == 1) {
-//                    isExist = true;
-//                }
-//            }
-//
-//            sql = "select id_nm from brand where brand_id = ? and password_customer = ?";
-//            smt = con.prepareStatement(sql);
-//            smt.setInt(1, c.getId_customer());
-//            smt.setString(2, c.getPassword());
-//            rs = smt.executeQuery();
-//
-//        } catch (Exception ex) {
-//            System.out.println(ex.getMessage());
-//        }
-//        return isExist;
-//    }
+//      To see if the brand exists
+    public boolean isBrandExist(Brand b) {
+        int count = 0;
+        boolean isExist = false;
+        try (Connection con = ConnectionDB.connection()) {
+            String sql = "select count(*) from brand where id_brand = ? and name_brand = ?";
+            PreparedStatement smt = con.prepareStatement(sql);
+            smt.setString(1, b.getBrand_id());
+            smt.setString(2, b.getBrand_name());
+            ResultSet rs = smt.executeQuery();
+
+            while (rs.next()) {
+                count = rs.getInt(1);
+                if (count == 1) {
+                    isExist = true;
+                }
+            }
+
+            sql = "select id_nm from brand where id_brand= ? and name_brand = ?";
+            smt = con.prepareStatement(sql);
+            smt.setString(1, b.getBrand_id());
+            smt.setString(2, b.getBrand_name());
+            rs = smt.executeQuery();
+
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return isExist;
+    }
 
     
     
-//         Load the customer
-//         @return all customer
+//         Load the brand
+//         @return all brands
     public LinkedList<Brand> charge() {
         LinkedList<Brand> brandList = new LinkedList<>();
         try (Connection con = ConnectionDB.connection()) {
@@ -83,8 +83,8 @@ public class BrandDAO {
 
                 };
                 b.setNum(rs.getInt("num"));
-                b.setBrand_id(rs.getString("brand_id"));
-                b.setBrand_name(rs.getString("brand_name"));
+                b.setBrand_id(rs.getString("id_brand"));
+                b.setBrand_name(rs.getString("name_brand"));
 
 
             }
@@ -100,7 +100,7 @@ public class BrandDAO {
 //     @throws Exception
     public boolean modify(Brand brand) throws Exception {
         try (Connection con = ConnectionDB.connection()) {
-            String sql = " update brand set brand_id =?, brand_name =? where num = ? ";
+            String sql = " update brand set id_brand =?, name_brand =? where num = ? ";
             PreparedStatement smt = con.prepareStatement(sql);
 
             smt.setString(1, brand.getBrand_id());

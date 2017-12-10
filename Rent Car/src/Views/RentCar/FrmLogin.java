@@ -35,11 +35,11 @@ public class FrmLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         txtID = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JTextField();
         lblId = new javax.swing.JLabel();
         lblPassword = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
         btnRegister = new javax.swing.JButton();
+        txtPassword = new javax.swing.JPasswordField();
         lblWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,10 +48,6 @@ public class FrmLogin extends javax.swing.JFrame {
         txtID.setBackground(new java.awt.Color(51, 51, 51));
         txtID.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 180, 30));
-
-        txtPassword.setBackground(new java.awt.Color(51, 51, 51));
-        txtPassword.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 180, 30));
 
         lblId.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
         lblId.setForeground(new java.awt.Color(0, 0, 0));
@@ -88,6 +84,10 @@ public class FrmLogin extends javax.swing.JFrame {
         });
         getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 130, -1));
 
+        txtPassword.setBackground(new java.awt.Color(51, 51, 51));
+        txtPassword.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 232, 180, 30));
+
         lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_First.jpg"))); // NOI18N
         getContentPane().add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 350));
 
@@ -106,19 +106,32 @@ public class FrmLogin extends javax.swing.JFrame {
         Customer cus = new Customer();
         CustomerBO cbo = new CustomerBO();
 
-        cus.setId_customer(Integer.parseInt(txtID.getText()));
+        cus.setId_customer(txtID.getText());
         cus.setPassword(txtPassword.getText());
         boolean isAuth = cbo.userLogin(cus);
         if (isAuth) {
-            if (cus.getId_customer() == 1111 && (cus.getPassword().equals("1111"))) {
-                System.out.println("Hello Admin!");
-            } else if (cus.getId_customer() != 1111) {
+            if ((cus.getId_customer().equals("admin")) && (cus.getPassword().equals("admin"))) {
+                FrmMenuAdmin adminMenu = new FrmMenuAdmin();
+                adminMenu.setVisible(true);
+                dispose();
+            } else if (cus.getId_customer()!= ("admin")) {
                 System.out.println(cus.getName() + cus.getLastname());
-                
+                FrmMenuCustomer customerMenu = new FrmMenuCustomer();
+                customerMenu.setVisible(true);
+                dispose();
             }
 
         }
     }
+    
+    
+    private void goAdminMenu(){
+        FrmMenuAdmin menu = new FrmMenuAdmin();
+        menu.setLocationRelativeTo(null);
+        menu.setVisible(true);
+        dispose();
+    }
+    
 
     
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
@@ -171,6 +184,6 @@ public class FrmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblWallpaper;
     private javax.swing.JTextField txtID;
-    private javax.swing.JTextField txtPassword;
+    private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
 }

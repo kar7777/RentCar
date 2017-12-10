@@ -133,7 +133,7 @@ public class FrmSignIn extends javax.swing.JFrame {
         txaDirection.setRows(5);
         jScrollPane1.setViewportView(txaDirection);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 250, 100));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 250, 100));
 
         password1.setBackground(new java.awt.Color(51, 51, 51));
         password1.setForeground(new java.awt.Color(255, 255, 255));
@@ -210,7 +210,7 @@ public class FrmSignIn extends javax.swing.JFrame {
         try {
             CustomerBO cbo = new CustomerBO();
             Customer c = new Customer();
-            c.setId_customer(Integer.parseInt(txtID.getText()));
+            c.setId_customer(txtID.getText());
             c.setName(txtName.getText());
             c.setLastname(txtLastname.getText());
             c.setTelephone(Integer.parseInt(txtTelephone.getText()));
