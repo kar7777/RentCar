@@ -53,53 +53,149 @@ public class FrmCRUDBrand extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jTextField3 = new javax.swing.JTextField();
+        tbpaneBrand = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
+        lblIDBrand = new javax.swing.JLabel();
+        lblName = new javax.swing.JLabel();
+        txtID = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
+        btnRegister = new javax.swing.JButton();
         lblWallpaper = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        idBrandFind = new javax.swing.JLabel();
+        lblNameBrand = new javax.swing.JLabel();
+        txtBrandFind = new javax.swing.JTextField();
+        txtNameBrand = new javax.swing.JTextField();
+        btnFind = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
         lblWallpaper1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         lblWallpaper2 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        lblWallpaper3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
+        jTextField3.setText("jTextField3");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        tbpaneBrand.setBackground(new java.awt.Color(51, 51, 51));
+        tbpaneBrand.setForeground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
-        jPanel1.add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
+        lblIDBrand.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblIDBrand.setForeground(new java.awt.Color(255, 255, 255));
+        lblIDBrand.setText("ID brand:");
+        jPanel1.add(lblIDBrand, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 70, -1));
 
-        jTabbedPane1.addTab("Register", jPanel1);
+        lblName.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblName.setForeground(new java.awt.Color(255, 255, 255));
+        lblName.setText("Name brand:");
+        jPanel1.add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+
+        txtID.setBackground(new java.awt.Color(51, 51, 51));
+        txtID.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 160, 30));
+
+        txtName.setBackground(new java.awt.Color(51, 51, 51));
+        txtName.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 160, 30));
+
+        btnRegister.setBackground(new java.awt.Color(102, 102, 0));
+        btnRegister.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnRegister.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegister.setText("Register");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 120, -1));
+
+        lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
+        jPanel1.add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 550));
+
+        tbpaneBrand.addTab("Register", jPanel1);
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblWallpaper1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
-        jPanel2.add(lblWallpaper1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
+        idBrandFind.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        idBrandFind.setForeground(new java.awt.Color(255, 255, 255));
+        idBrandFind.setText("ID brand:");
+        jPanel2.add(idBrandFind, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
-        jTabbedPane1.addTab("Update", jPanel2);
+        lblNameBrand.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblNameBrand.setForeground(new java.awt.Color(255, 255, 255));
+        lblNameBrand.setText("Name brand:");
+        jPanel2.add(lblNameBrand, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+
+        txtBrandFind.setBackground(new java.awt.Color(51, 51, 51));
+        txtBrandFind.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(txtBrandFind, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 170, 30));
+
+        txtNameBrand.setBackground(new java.awt.Color(51, 51, 51));
+        txtNameBrand.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(txtNameBrand, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 170, 30));
+
+        btnFind.setBackground(new java.awt.Color(102, 102, 0));
+        btnFind.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnFind.setForeground(new java.awt.Color(255, 255, 255));
+        btnFind.setText("Find");
+        jPanel2.add(btnFind, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 100, 30));
+
+        btnUpdate.setBackground(new java.awt.Color(102, 102, 0));
+        btnUpdate.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        btnUpdate.setText("Update");
+        jPanel2.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 100, -1));
+
+        btnDelete.setBackground(new java.awt.Color(102, 102, 0));
+        btnDelete.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
+        btnDelete.setText("Delete");
+        jPanel2.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 100, -1));
+
+        lblWallpaper1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
+        jPanel2.add(lblWallpaper1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 550));
+
+        tbpaneBrand.addTab("Update", jPanel2);
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 220));
+
         lblWallpaper2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
-        jPanel3.add(lblWallpaper2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
+        jPanel3.add(lblWallpaper2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 550));
 
-        jTabbedPane1.addTab("Charge", jPanel3);
-
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lblWallpaper3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
-        jPanel4.add(lblWallpaper3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
-
-        jTabbedPane1.addTab("Delete", jPanel4);
+        tbpaneBrand.addTab("See all", jPanel3);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Exit");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -108,15 +204,23 @@ public class FrmCRUDBrand extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(tbpaneBrand, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(tbpaneBrand)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenu2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,17 +259,30 @@ public class FrmCRUDBrand extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnFind;
+    private javax.swing.JButton btnRegister;
+    private javax.swing.JButton btnUpdate;
+    private javax.swing.JLabel idBrandFind;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel lblIDBrand;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblNameBrand;
     private javax.swing.JLabel lblWallpaper;
     private javax.swing.JLabel lblWallpaper1;
     private javax.swing.JLabel lblWallpaper2;
-    private javax.swing.JLabel lblWallpaper3;
+    private javax.swing.JTabbedPane tbpaneBrand;
+    private javax.swing.JTextField txtBrandFind;
+    private javax.swing.JTextField txtID;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtNameBrand;
     // End of variables declaration//GEN-END:variables
 }

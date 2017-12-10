@@ -53,13 +53,17 @@ public class FrmCRUDCar extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
+        btnRegister = new javax.swing.JButton();
         lblWallpaper = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        btnFind = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
         lblWallpaper1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         lblWallpaper2 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        lblWallpaper3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mbarFile = new javax.swing.JMenu();
         mniMenuAdmin = new javax.swing.JMenuItem();
@@ -70,6 +74,17 @@ public class FrmCRUDCar extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnRegister.setBackground(new java.awt.Color(102, 102, 0));
+        btnRegister.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnRegister.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegister.setText("Register");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 120, -1));
+
         lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
         jPanel1.add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
 
@@ -77,24 +92,50 @@ public class FrmCRUDCar extends javax.swing.JFrame {
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnFind.setBackground(new java.awt.Color(102, 102, 0));
+        btnFind.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnFind.setForeground(new java.awt.Color(255, 255, 255));
+        btnFind.setText("Find");
+        jPanel2.add(btnFind, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 100, 30));
+
+        btnUpdate.setBackground(new java.awt.Color(102, 102, 0));
+        btnUpdate.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        btnUpdate.setText("Update");
+        jPanel2.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 100, -1));
+
+        btnDelete.setBackground(new java.awt.Color(102, 102, 0));
+        btnDelete.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
+        btnDelete.setText("Delete");
+        jPanel2.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 100, -1));
+
         lblWallpaper1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
-        jPanel2.add(lblWallpaper1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
+        jPanel2.add(lblWallpaper1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 550));
 
         jTabbedPane1.addTab("Update", jPanel2);
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 220));
+
         lblWallpaper2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
         jPanel3.add(lblWallpaper2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
 
-        jTabbedPane1.addTab("Charge", jPanel3);
-
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lblWallpaper3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
-        jPanel4.add(lblWallpaper3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
-
-        jTabbedPane1.addTab("Delete", jPanel4);
+        jTabbedPane1.addTab("See all", jPanel3);
 
         mbarFile.setText("File");
 
@@ -143,6 +184,10 @@ public class FrmCRUDCar extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_mbarExitActionPerformed
 
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegisterActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -180,16 +225,20 @@ public class FrmCRUDCar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnFind;
+    private javax.swing.JButton btnRegister;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblWallpaper;
     private javax.swing.JLabel lblWallpaper1;
     private javax.swing.JLabel lblWallpaper2;
-    private javax.swing.JLabel lblWallpaper3;
     private javax.swing.JMenu mbarExit;
     private javax.swing.JMenu mbarFile;
     private javax.swing.JMenuItem mniLogOut;
