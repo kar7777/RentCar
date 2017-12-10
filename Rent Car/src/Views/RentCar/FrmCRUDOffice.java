@@ -57,9 +57,13 @@ public class FrmCRUDOffice extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
+        lblWallpaper = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        lblWallpaper1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        lblWallpaper2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
+        lblWallpaper3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mbarFile = new javax.swing.JMenu();
         mniMenu = new javax.swing.JMenuItem();
@@ -68,55 +72,31 @@ public class FrmCRUDOffice extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 415, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 349, Short.MAX_VALUE)
-        );
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
+        jPanel1.add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
 
         jTabbedPane1.addTab("Register", jPanel1);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 415, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 349, Short.MAX_VALUE)
-        );
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTabbedPane1.addTab("Modify", jPanel2);
+        lblWallpaper1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
+        jPanel2.add(lblWallpaper1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 415, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 349, Short.MAX_VALUE)
-        );
+        jTabbedPane1.addTab("Update", jPanel2);
+
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblWallpaper2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
+        jPanel3.add(lblWallpaper2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
 
         jTabbedPane1.addTab("Charge", jPanel3);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 415, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 349, Short.MAX_VALUE)
-        );
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblWallpaper3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
+        jPanel4.add(lblWallpaper3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 550));
 
         jTabbedPane1.addTab("Delete", jPanel4);
 
@@ -227,6 +207,10 @@ public class FrmCRUDOffice extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel lblWallpaper;
+    private javax.swing.JLabel lblWallpaper1;
+    private javax.swing.JLabel lblWallpaper2;
+    private javax.swing.JLabel lblWallpaper3;
     private javax.swing.JMenu mbarExit;
     private javax.swing.JMenu mbarFile;
     private javax.swing.JMenuItem mniLogOut;

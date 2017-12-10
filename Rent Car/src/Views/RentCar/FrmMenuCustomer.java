@@ -19,6 +19,7 @@ public class FrmMenuCustomer extends javax.swing.JFrame {
      */
     public FrmMenuCustomer() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
