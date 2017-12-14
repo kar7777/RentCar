@@ -22,6 +22,17 @@ public class FrmMenuCustomer extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
+    public void FrmRentCarCustomer(){
+        FrmRentCarCustomer rent = new FrmRentCarCustomer();
+        rent.setVisible(true);
+        rent.setLocationRelativeTo(null);
+        
+    }
+     public void SearchVehicle(){
+        FrmPhoto photo = new FrmPhoto();
+        photo.setVisible(true);
+        photo.setLocationRelativeTo(null);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,21 +42,50 @@ public class FrmMenuCustomer extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        btnRentCar = new javax.swing.JButton();
+        btnSearchVehicle = new javax.swing.JButton();
+        Wallpaper = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnRentCar.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
+        btnRentCar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/car (1).png"))); // NOI18N
+        btnRentCar.setText("RentCar");
+        btnRentCar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/car.png"))); // NOI18N
+        btnRentCar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/car.png"))); // NOI18N
+        btnRentCar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRentCarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRentCar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 290, 110));
+
+        btnSearchVehicle.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
+        btnSearchVehicle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/auto.png"))); // NOI18N
+        btnSearchVehicle.setText("Search Vehicle");
+        btnSearchVehicle.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/auto (1).png"))); // NOI18N
+        btnSearchVehicle.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/auto.png"))); // NOI18N
+        btnSearchVehicle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchVehicleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSearchVehicle, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 290, 110));
+
+        Wallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
+        getContentPane().add(Wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 420));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRentCarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRentCarActionPerformed
+      FrmRentCarCustomer();
+    }//GEN-LAST:event_btnRentCarActionPerformed
+
+    private void btnSearchVehicleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchVehicleActionPerformed
+      SearchVehicle();
+    }//GEN-LAST:event_btnSearchVehicleActionPerformed
 
     /**
      * @param args the command line arguments
@@ -83,5 +123,8 @@ public class FrmMenuCustomer extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Wallpaper;
+    private javax.swing.JButton btnRentCar;
+    private javax.swing.JButton btnSearchVehicle;
     // End of variables declaration//GEN-END:variables
 }

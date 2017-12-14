@@ -72,6 +72,8 @@ public class FrmSignIn extends javax.swing.JFrame {
         lblRegister = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         lblWallpaper = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -173,13 +175,24 @@ public class FrmSignIn extends javax.swing.JFrame {
         lblRegister.setFont(new java.awt.Font("Palatino Linotype", 1, 18)); // NOI18N
         lblRegister.setForeground(new java.awt.Color(255, 255, 255));
         lblRegister.setText("REGISTER");
-        getContentPane().add(lblRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 100, -1));
+        getContentPane().add(lblRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 100, -1));
 
         jButton1.setBackground(new java.awt.Color(102, 102, 102));
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 26, 180, 40));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 180, 40));
 
         lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
-        getContentPane().add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 550));
+        getContentPane().add(lblWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 600, 570));
+
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/previous.png"))); // NOI18N
+        jMenu1.setText("Back");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -252,6 +265,10 @@ public class FrmSignIn extends javax.swing.JFrame {
         registerNewCustomer();
     }//GEN-LAST:event_btnRegisterActionPerformed
 
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        goLogin();
+    }//GEN-LAST:event_jMenu1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -291,6 +308,8 @@ public class FrmSignIn extends javax.swing.JFrame {
     private javax.swing.JButton btnRegister;
     private javax.swing.JButton btnSelectPhoto;
     private javax.swing.JButton jButton1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblDirection;
     private javax.swing.JLabel lblID;
