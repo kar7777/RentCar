@@ -76,7 +76,6 @@ public class FrmCRUDBrand extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         lblWallpaper2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
         jTextField3.setText("jTextField3");
@@ -187,9 +186,6 @@ public class FrmCRUDBrand extends javax.swing.JFrame {
 
         tbpaneBrand.addTab("See all", jPanel3);
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
-
         jMenu2.setText("Exit");
         jMenu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -264,7 +260,6 @@ public class FrmCRUDBrand extends javax.swing.JFrame {
     private javax.swing.JButton btnRegister;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel idBrandFind;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;

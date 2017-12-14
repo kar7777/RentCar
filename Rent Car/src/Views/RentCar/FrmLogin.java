@@ -7,6 +7,7 @@ package Views.RentCar;
 
 import BO.RentCar.CustomerBO;
 import Logic.RentCar.Customer;
+import java.awt.event.KeyEvent;
 
 /**
  *
@@ -47,17 +48,20 @@ public class FrmLogin extends javax.swing.JFrame {
 
         txtID.setBackground(new java.awt.Color(51, 51, 51));
         txtID.setForeground(new java.awt.Color(255, 255, 255));
+        txtID.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtIDKeyPressed(evt);
+            }
+        });
         getContentPane().add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 180, 30));
 
         lblId.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
-        lblId.setForeground(new java.awt.Color(0, 0, 0));
         lblId.setText("ID:");
         getContentPane().add(lblId, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, -1, -1));
 
         lblPassword.setFont(new java.awt.Font("Palatino Linotype", 1, 14)); // NOI18N
-        lblPassword.setForeground(new java.awt.Color(0, 0, 0));
         lblPassword.setText("Password:");
-        getContentPane().add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, -1, -1));
+        getContentPane().add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, -1, -1));
 
         btnLogin.setBackground(new java.awt.Color(51, 51, 51));
         btnLogin.setFont(new java.awt.Font("Palatino Linotype", 1, 12)); // NOI18N
@@ -82,10 +86,15 @@ public class FrmLogin extends javax.swing.JFrame {
                 btnRegisterActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 130, -1));
+        getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, 130, -1));
 
         txtPassword.setBackground(new java.awt.Color(51, 51, 51));
         txtPassword.setForeground(new java.awt.Color(255, 255, 255));
+        txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtPasswordKeyPressed(evt);
+            }
+        });
         getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 232, 180, 30));
 
         lblWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_First.jpg"))); // NOI18N
@@ -132,8 +141,11 @@ public class FrmLogin extends javax.swing.JFrame {
         dispose();
     }
     
+     public void CleanSpaces() {
+        txtID.setText("");
+        txtPassword.setText("");
 
-    
+     }
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         login();
     }//GEN-LAST:event_btnLoginActionPerformed
@@ -141,6 +153,18 @@ public class FrmLogin extends javax.swing.JFrame {
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
         goRegister();
     }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void txtPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasswordKeyPressed
+         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {//CHANGE FOCUS IN ENTER KEY
+            this.btnLogin.requestFocus();
+        }
+    }//GEN-LAST:event_txtPasswordKeyPressed
+
+    private void txtIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIDKeyPressed
+            if (evt.getKeyCode() == KeyEvent.VK_ENTER) {//CHANGE FOCUS IN ENTER KEY
+         this.txtID.requestFocus();
+        }
+    }//GEN-LAST:event_txtIDKeyPressed
 
     /**
      * @param args the command line arguments
