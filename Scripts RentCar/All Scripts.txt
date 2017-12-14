@@ -1,0 +1,147 @@
+-- Table: public.brand
+
+-- DROP TABLE public.brand;
+
+CREATE TABLE public.brand
+(
+    num integer NOT NULL DEFAULT nextval('brand_num_seq'::regclass),
+    id_brand text COLLATE pg_catalog."default" NOT NULL,
+    name_brand text COLLATE pg_catalog."default",
+    CONSTRAINT brand_pkey PRIMARY KEY (num, id_brand)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.brand
+    OWNER to postgres;
+
+
+
+
+-- Table: public.model
+
+-- DROP TABLE public.model;
+
+CREATE TABLE public.model
+(
+    num integer NOT NULL DEFAULT nextval('model_num_seq'::regclass),
+    id_model text COLLATE pg_catalog."default" NOT NULL,
+    name_model text COLLATE pg_catalog."default",
+    CONSTRAINT model_pkey PRIMARY KEY (num, id_model)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.model
+    OWNER to postgres;
+
+
+
+
+-- Table: public.car
+
+-- DROP TABLE public.car;
+
+CREATE TABLE public.car
+(
+    num_car integer NOT NULL DEFAULT nextval('car_num_car_seq'::regclass),
+    id_car text COLLATE pg_catalog."default",
+    model_car text COLLATE pg_catalog."default",
+    style_car text COLLATE pg_catalog."default",
+    transmission_car text COLLATE pg_catalog."default",
+    price_car integer,
+    photo_car text COLLATE pg_catalog."default",
+    available_car text COLLATE pg_catalog."default",
+    brand_car text COLLATE pg_catalog."default",
+    year_car text COLLATE pg_catalog."default",
+    CONSTRAINT car_pkey PRIMARY KEY (num_car)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.car
+    OWNER to postgres;
+
+
+
+
+
+
+-- Table: public.style
+
+-- DROP TABLE public.style;
+
+CREATE TABLE public.style
+(
+    num integer NOT NULL DEFAULT nextval('style_num_seq'::regclass),
+    id_style text COLLATE pg_catalog."default" NOT NULL,
+    name_style text COLLATE pg_catalog."default",
+    CONSTRAINT style_pkey PRIMARY KEY (num, id_style)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.style
+    OWNER to postgres;
+
+
+
+
+
+
+-- Table: public.style
+
+-- DROP TABLE public.style;
+
+CREATE TABLE public.style
+(
+    num integer NOT NULL DEFAULT nextval('style_num_seq'::regclass),
+    id_style text COLLATE pg_catalog."default" NOT NULL,
+    name_style text COLLATE pg_catalog."default",
+    CONSTRAINT style_pkey PRIMARY KEY (num, id_style)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.style
+    OWNER to postgres;
+
+
+
+
+
+
+
+-- Table: public.customer
+
+-- DROP TABLE public.customer;
+
+CREATE TABLE public.customer
+(
+    id_nm integer NOT NULL DEFAULT nextval('customer_id_nm_seq'::regclass),
+    id_customer text COLLATE pg_catalog."default" NOT NULL,
+    name_customer text COLLATE pg_catalog."default",
+    lastname_customer text COLLATE pg_catalog."default",
+    telephone_customer integer,
+    direction_customer text COLLATE pg_catalog."default",
+    photo_customer text COLLATE pg_catalog."default",
+    password_customer text COLLATE pg_catalog."default",
+    CONSTRAINT customer_pkey PRIMARY KEY (id_nm, id_customer)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.customer
+    OWNER to postgres;

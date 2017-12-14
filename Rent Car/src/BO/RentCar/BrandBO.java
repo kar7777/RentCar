@@ -7,6 +7,7 @@ package BO.RentCar;
 
 import DAO.RentCar.BrandDAO;
 import Logic.RentCar.Brand;
+import java.util.LinkedList;
 
 /**
  *
@@ -45,6 +46,25 @@ public class BrandBO {
         BrandDAO brddao = new BrandDAO();
         return brddao.isBrandExist(brd);
     }
+    
+    
+    
+    public LinkedList<Brand> brandList() {
+        BrandDAO branddao = new BrandDAO();
+        return branddao.charge();
+    }
+    
+//    public LinkedList<Brand> find() {
+//        BrandDAO musdao = new BrandDAO();
+//
+//            Brand m = musdao.chargeByAuthor();
+//            LinkedList<Brand> result = new LinkedList<>();
+//            if (m != null) {
+//                result.add(m);
+//            }
+//            return result;
+//        
+//    }
 
     /**
      * delete to brand

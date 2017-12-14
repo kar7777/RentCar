@@ -24,15 +24,15 @@ public class CarDAO {
     public boolean insert(Car c) throws Exception {
 
         try (Connection con = ConnectionDB.connection()) {
-            String sql = "insert into car (num_car, id_car, brand_car, model_car, style_car, transmission_car"
-                    + ", year_car, price_car, photo_car, available_car) values (?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into car (id_car, brand_car, model_car, style_car, transmission_car"
+                    + ", year_car, price_car, photo_car, available_car) values (?,?,?,?,?,?,?,?,?)";
             PreparedStatement smt = con.prepareStatement(sql);
             smt.setString(1, c.getId_car());
             smt.setString(2, c.getBrand_car());
             smt.setString(3, c.getModel_car());
             smt.setString(4, c.getStyle_car());
             smt.setString(5, c.getTransmission_car());
-            smt.setInt(6, (c.getYear_car()));
+            smt.setString(6, (c.getYear_car()));
             smt.setInt(7, c.getPrice_car());
             smt.setString(8, c.getPhoto_car());
             smt.setString(9, c.getAvailable_car());
@@ -91,7 +91,7 @@ public class CarDAO {
                 c.setModel_car(rs.getString("model_car"));
                 c.setStyle_car(rs.getString("style_car"));
                 c.setTransmission_car(rs.getString("transmission_car"));
-                c.setYear_car(rs.getInt("year_car"));
+                c.setYear_car(rs.getString("year_car"));
                 c.setPrice_car(rs.getInt("price_car"));
                 c.setPhoto_car(rs.getString("photo_car"));
                 c.setAvailable_car(rs.getString("available_car"));
@@ -119,7 +119,7 @@ public class CarDAO {
             smt.setString(3, car.getModel_car());
             smt.setString(4, car.getStyle_car());
             smt.setString(5, car.getTransmission_car());
-            smt.setInt(6, car.getYear_car());
+            smt.setString(6, car.getYear_car());
             smt.setInt(7, car.getPrice_car());
             smt.setString(8, car.getPhoto_car());
             smt.setString(9, car.getAvailable_car());

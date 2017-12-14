@@ -19,7 +19,7 @@ public class Car {
     private String model_car;
     private String style_car;
     private String transmission_car;
-    private int year_car;
+    private String year_car;
     private int price_car;
     private String photo_car;
     private String available_car;
@@ -28,7 +28,7 @@ public class Car {
     }
 
     public Car(int id, String id_car, String brand_car, String model_car, String style_car, String transmission_car,
-            int year_car, int price_car, String photo_car, String available_car) {
+            String year_car, int price_car, String photo_car, String available_car) {
         this.num_car = num_car;
         this.id_car = id_car;
         this.brand_car = brand_car;
@@ -89,11 +89,11 @@ public class Car {
         this.transmission_car = transmission_car;
     }
 
-    public int getYear_car() {
+    public String getYear_car() {
         return year_car;
     }
 
-    public void setYear_car(int year_car) {
+    public void setYear_car(String year_car) {
         this.year_car = year_car;
     }
 

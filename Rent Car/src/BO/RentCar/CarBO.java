@@ -38,7 +38,7 @@ public class CarBO {
         if (c.getTransmission_car().isEmpty()) {
             throw new Exception("transmission required");
         }        
-        if (c.getYear_car()<= 0) {
+        if (c.getYear_car().isEmpty()) {
             throw new Exception("Year required");
         }
         if (c.getPrice_car()<= 0) {
