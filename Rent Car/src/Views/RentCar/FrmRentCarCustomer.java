@@ -63,7 +63,7 @@ public class FrmRentCarCustomer extends javax.swing.JFrame {
       c1=Integer.parseInt(Fun1);
       c2=Integer.parseInt(Fun2);
       c3=Integer.parseInt(Fun3);
-      sum = (Fun1 + Fun2 + Fun3);
+      sum = (c1 + c2 + c3);
       suma =  sum;
         
         lblTotalAdditional.setText(String.valueOf(suma));
@@ -197,7 +197,7 @@ public class FrmRentCarCustomer extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, -1, -1));
 
         Wallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/RentCar/Wallpaper_Second.jpg"))); // NOI18N
         Wallpaper.addKeyListener(new java.awt.event.KeyAdapter() {
